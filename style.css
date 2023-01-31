@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+    font-family: Norse;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
 body {
     background-color: black;
 }
@@ -11,7 +17,6 @@ body {
 .main {
     display: flex;
     width: 65vw;
-    border: 1px solid red;
     margin: 0 auto;
     background-color: white;
 }
@@ -24,7 +29,6 @@ body {
 }
 
 .img, .main-body{
-    border: 1px solid blue;
     height: 100vh;
 }
 
@@ -40,20 +44,47 @@ body {
 .img {
     width: 40%;
     background-image: url(img/side-background.avif);
-    background-size: inherit;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
 }
 
-.img img {
-    height: 100%;
-    width: auto;
-    object-fit: none;
+.logo-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    height: 9rem; 
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    width: 100%; 
 }
+
+.logo-container p {
+    align-self: center;
+    font-family: Norse;    
+    font-size: 5rem;
+}
+
+.img > p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: normal;
+    opacity: 0.7;
+    bottom: 0.8rem;
+}
+
+
 
 .header {
-    border: 1px solid yellow;
     height: 35%;
     display: flex;
     align-items: flex-end;
+    background-color: rgba(249,250,251,255);
 }
 
 .header .text {
@@ -62,7 +93,7 @@ body {
     gap: 1.4rem;
 }
 
-p {
+.text p {
     font-weight: bold;
     font-size: 1.4rem;
 }
@@ -71,9 +102,9 @@ p {
 }
 
 .form-main {
-    border: 1px solid green;
     padding: 0.5rem;
-    
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);   
+    z-index: 1; 
 }
 
 .form-main > * {
@@ -81,8 +112,9 @@ p {
 }
 
 .button-div {
-    border: 1px solid fuchsia;
     height: 35%;
+    background-color: rgba(249,250,251,255);
+    padding: 2em;
 }
 
 ul {
@@ -99,11 +131,29 @@ label {
 }
 
 .form-list li {
-    border: 1px solid pink;
     width: 40%;
 }
 
 .button-div p{
     font-weight: bold;
+}
+
+.button-div button {
+    background-color: rgba(89,109,72,255);
+    color: rgba(249,250,251,255);
+    padding: 0.8rem 3rem;
+    font-weight: bold;
     font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.button-div a {
+    text-decoration: inherit;
+    color: black;
+}
+
+.button-div a:hover {
+    text-decoration: underline;
 }
