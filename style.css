@@ -124,7 +124,7 @@ ul {
     list-style-type: none;
     display: flex;
     flex: 1;
-    gap: 2.5rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
@@ -133,22 +133,41 @@ label {
     display: block;
     font-size: 0.7rem;
     font-weight: bold;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.2px;
 }
 
 .form-list li {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 0.5rem;
+    margin-right: 2rem;
+    flex: 1;
 }
 
-input {
-    border: 1px solid black;
-    font-size: 1.3rem;
+.form-input {
+    border: 1px solid #E5E7EB;
+    font-size: 1rem;
     font-weight: normal;
-    height: 2rem;
+    padding: 0.3rem;
+    max-width: 20rem;
+    margin-right: 1rem;
+    min-width: 10rem;
+    display: block;
+    border-radius: 0.3em;
 }
 
-input:focus {
-    border: 2px solid rgb(18, 60, 175);
+.form-input:focus {
+    all: unset;
+    border: 1px solid blue;
+    padding: 0.3rem;
+    border-radius: 0.3em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
+    max-width: 20rem;
+    margin-right: 1rem;
+    min-width: 10rem;
 }
 
 .button-div p{
@@ -156,7 +175,7 @@ input:focus {
 }
 
 .button-div button {
-    background-color: rgba(89,109,72,255);
+    background-color: #596D48;
     color: rgba(249,250,251,255);
     padding: 0.8rem 3rem;
     font-weight: bold;
