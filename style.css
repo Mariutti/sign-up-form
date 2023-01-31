@@ -4,19 +4,23 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body {
+    background-color: black;
+}
 
 .main {
     display: flex;
-    width: 80vw;
+    width: 65vw;
     border: 1px solid red;
     margin: 0 auto;
+    background-color: white;
 }
 
 .header,
 .form-main,
 .button-div {
     padding: 4rem 2rem;
-    flex: 1;
+    flex: 1 1 auto;
 }
 
 .img, .main-body{
@@ -26,24 +30,39 @@
 
 .main-body {
     border: 1px solid green;
-    flex-basis: 66vw;
+    flex-basis: 63%;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
+    
 }
 
 .img {
-    width: 33vw;
+    width: 40%;
+    background-image: url(img/side-background.avif);
+    background-size: inherit;
+}
+
+.img img {
+    height: 100%;
+    width: auto;
+    object-fit: none;
 }
 
 .header {
     border: 1px solid yellow;
-    height: fit-content;
+    height: 35%;
     display: flex;
     align-items: flex-end;
 }
 
-.header p {
+.header .text {
+    display: flex;
+    flex-direction: column;    
+    gap: 1.4rem;
+}
+
+p {
     font-weight: bold;
     font-size: 1.4rem;
 }
@@ -53,8 +72,38 @@
 
 .form-main {
     border: 1px solid green;
+    padding: 0.5rem;
+    
+}
+
+.form-main > * {
+    padding: 1rem;
 }
 
 .button-div {
     border: 1px solid fuchsia;
+    height: 35%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+label {
+    display: block;
+}
+
+.form-list li {
+    border: 1px solid pink;
+    width: 40%;
+}
+
+.button-div p{
+    font-weight: bold;
+    font-size: 1rem;
 }
