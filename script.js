@@ -20,7 +20,5 @@ const confirm = function(){
     textConfirm.style.textTransform = 'uppercase';
 }
 
-
-
 pwdConf.addEventListener(`input`, confirm)
 pwd.addEventListener(`input`, confirm)
